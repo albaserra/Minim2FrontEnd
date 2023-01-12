@@ -56,6 +56,11 @@ public interface PouServices {
     @GET("/dsaApp/pougame/pou/ranking/{rankingId}")
     Call<List<Pou>> obtenerPousOrdenadosDescendentemente(@Path("rankingId") String rankingId);
 
+    // UBICACIÓN: Activity_Preguntas_Frecuentes.
+    // Descripción: Obtenemos una lista con respuestas a las preguntas frecuentes.
+    @GET("/{FAQS}")
+    Call<List<String>> listaPreguntasRespuestas(@Path("{FAQS}") String FAQS);
+
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     // EJEMPLOS DE SERVICIOS POU (GET, POST Y PUT)
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
